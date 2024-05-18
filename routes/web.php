@@ -19,14 +19,14 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-Route::get('/', [DocumentoController::class, 'index'])->name('documentos.index');
-Route::get('/documento/create', [DocumentoController::class, 'create'])->name('documentos.create');
-Route::post('/documento', [DocumentoController::class, 'store'])->name('documentos.store');
+Route::get('/', [DocumentoController::class, 'index'])->name('documentos.index')->middleware('auth');
+Route::get('/documento/create', [DocumentoController::class, 'create'])->name('documentos.create')->middleware('auth');
+Route::post('/documento', [DocumentoController::class, 'store'])->name('documentos.store')->middleware('auth');
 
-Route::get('/documento/{id}/edit', [DocumentoController::class, 'edit'])->name('documentos.edit');
-Route::put('/documento/{id}', [DocumentoController::class, 'update'])->name('documentos.update');
-Route::delete('/documento/{id}', [DocumentoController::class, 'destroy'])->name('documentos.destroy');
-Route::get('/search', [DocumentoController::class, 'search'])->name('documentos.search');
+Route::get('/documento/{id}/edit', [DocumentoController::class, 'edit'])->name('documentos.edit')->middleware('auth');
+Route::put('/documento/{id}', [DocumentoController::class, 'update'])->name('documentos.update')->middleware('auth');
+Route::delete('/documento/{id}', [DocumentoController::class, 'destroy'])->name('documentos.destroy')->middleware('auth');
+Route::get('/search', [DocumentoController::class, 'search'])->name('documentos.search')->middleware('auth');
 
 Auth::routes();
 
