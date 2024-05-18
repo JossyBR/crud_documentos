@@ -9,6 +9,7 @@ class Proceso extends Model
 {
     use HasFactory;
 
+    protected $table = 'pro_proceso';
     protected $primaryKey = 'pro_id';
 
     protected $fillable = [

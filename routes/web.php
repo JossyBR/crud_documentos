@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DocumentoController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-// Route::get('/', [DocumentoController::class, 'index']);
-// Route::get('/document/create', [DocumentController::class, 'create']);
-// Route::post('/document', [DocumentController::class, 'store']);
-// Route::get('/document/{id}/edit', [DocumentController::class, 'edit']);
-// Route::put('/document/{id}', [DocumentController::class, 'update']);
-// Route::delete('/document/{id}', [DocumentController::class, 'destroy']);
+Route::get('/', [DocumentoController::class, 'index'])->name('documentos.index');
+Route::get('/documento/create', [DocumentoController::class, 'create'])->name('documentos.create');
+Route::post('/documento', [DocumentoController::class, 'store'])->name('documentos.store');
+
+Route::get('/documento/{id}/edit', [DocumentoController::class, 'edit'])->name('documentos.edit');
+Route::put('/documento/{id}', [DocumentoController::class, 'update'])->name('documentos.update');
+Route::delete('/documento/{id}', [DocumentoController::class, 'destroy'])->name('documentos.destroy');
+Route::get('/search', [DocumentoController::class, 'search'])->name('documentos.search');
 
 Auth::routes();
 
