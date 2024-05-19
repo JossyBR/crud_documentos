@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container">
-    <h1>Documentos</h1>
+    <h1>Listado de Documentos</h1>
     <form action="{{ route('documentos.search') }}" method="GET">
         <input type="text" name="query" placeholder="Buscar documentos">
         <button type="submit">Buscar</button>
     </form>
-    <a href="{{ route('documentos.create') }}" class="btn btn-primary">Crear Documento</a>
+    <a href="{{ route('documentos.create') }}" class="mt-4 mb-4 btn btn-primary">Crear Documento</a>
     <table class="table">
         <thead>
             <tr>
