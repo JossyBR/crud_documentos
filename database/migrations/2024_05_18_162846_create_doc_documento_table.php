@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('doc_documento', function (Blueprint $table) {
-            $table->integer('doc_id')->primary();
+            $table->increments('doc_id');
             $table->string('doc_nombre', 50);
             $table->string('doc_codigo', 20)->unique();
             $table->string('doc_contenido', 4000);
-            $table->integer('doc_id_tipo')->unsigned(); 
-            $table->integer('doc_id_proceso')->unsigned();
+            $table->unsignedInteger('doc_id_tipo')->unsigned(); 
+            $table->unsignedInteger('doc_id_proceso')->unsigned();
             $table->timestamps();
 
             // claves foráneas
