@@ -22,7 +22,7 @@ export default defineConfig({
             vue: "vue/dist/vue.esm-bundler.js",
         },
     },
-    server: {
-        https: true, // Fuerza HTTPS en el servidor de desarrollo
-    },
+    // server: {
+    //     https: true, // Fuerza HTTPS en el servidor de desarrollo
+    // },
 });

@@ -28,7 +28,7 @@
                 <td>{{ $documento->tipo->tip_nombre }}</td>
                 <td>{{ $documento->proceso->pro_nombre }}</td>
                 <td>
-                    <a href="{{ route('documentos.edit', $documento->doc_id) }}" class="btn btn-warning">Editar</a>
+                    <a href="{{ route('documentos.edit', $documento->doc_id) }}" class="btn btn-success">Editar</a>
                     <form action="{{ route('documentos.destroy', $documento->doc_id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
