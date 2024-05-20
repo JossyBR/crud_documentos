@@ -1,8 +1,14 @@
-# Sistema creación de documentos
+# Crud de documentos
 
 ## Descripción
 
 Aplicación para gestionar documentos, implementada en PHP utilizando Laravel y Vue.js para el frontend.
+
+## DEMO
+
+https://cruddocumentos-production.up.railway.app
+
+## PARA UTILIZARLO EN LOCAL
 
 ## Requisitos
 
@@ -14,11 +20,6 @@ Aplicación para gestionar documentos, implementada en PHP utilizando Laravel y 
 ## Instalación
 
 1. Clonar el repositorio git clone https://github.com/JossyBR/crud_documentos.git
-2. Ejecutar `composer install`
-3. Configurar la base de datos en `.env`
-4. Ejecutar `php artisan migrate --seed`
-5. Ejecutar `npm install && npm run dev`
-6. Levantar el servidor local con `php artisan serve`
 
 ### Configurar la Base de Datos
 
@@ -56,12 +57,9 @@ php artisan serve
 
 ## Credencial de prueba
 
--   Usuario: `admin@gmail.com`
--   Contraseña: `admin12345`
+-   Para ingresar debes registrarte
 
 ## Tecnologías y Paquetes Utilizados
 
 -   Laravel (Framework de PHP)
 -   Laravel UI vue (Para la generación de la interfaz de autenticación)
-
-## Diagramas
